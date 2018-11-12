@@ -1,7 +1,6 @@
 pipeline {
   agent {
     docker {
-      args 'echo hello'
       image 'rbekker87/build-tools:latest'
     }
 
@@ -9,12 +8,7 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'echo "hello world"'
-      }
-    }
-    stage('mail') {
-      steps {
-        echo 'mailing'
+        sh 'echo "${hostname}"'
       }
     }
   }
