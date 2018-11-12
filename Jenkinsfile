@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'sudo pip install -r requirements.txt  && sudo python app.py'
+        sh 'echo "hello world"'
       }
     }
     stage('mail') {
