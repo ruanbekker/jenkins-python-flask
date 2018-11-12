@@ -8,8 +8,8 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'export foo=$(hostname)'
-        sh 'echo $foo'
+        sh 'echo $(hostname) > /tmp/hostname.txt'
+        sh 'cat /tmp/hostname.txt'
       }
     }
   }
