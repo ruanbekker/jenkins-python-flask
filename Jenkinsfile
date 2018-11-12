@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'virtualenv .venv && source .venv/bin/activate && pip install -r requirements.txt && python app.py'
+        sh 'sudo pip install -r requirements.txt  && sudo python app.py'
       }
     }
     stage('mail') {
