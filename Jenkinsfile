@@ -1,5 +1,11 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'rbekker87/build-tools'
+      args 'echo hello'
+    }
+
+  }
   stages {
     stage('test') {
       steps {
