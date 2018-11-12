@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'rbekker87/build-tools'
       args 'echo hello'
+      image 'rbekker87/build-tools:latest'
     }
 
   }
