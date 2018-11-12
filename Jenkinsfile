@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'docker build -t rbekker87/jenkins-python-flask:test .'
+        sh 'pip install -r requirements.txt && python app.py'
       }
     }
     stage('mail') {
