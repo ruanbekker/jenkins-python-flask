@@ -8,7 +8,8 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'echo "${hostname}"'
+        sh 'hostname'
+        sh 'whoami'
       }
     }
   }
