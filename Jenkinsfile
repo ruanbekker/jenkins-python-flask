@@ -8,8 +8,8 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        sh 'hostname'
-        sh 'whoami'
+        sh 'export foo=$(hostname)'
+        sh 'echo $foo'
       }
     }
   }
